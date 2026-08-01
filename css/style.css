@@ -1,15 +1,40 @@
-/* Reset básico */
+/* =========================================================
+   BORBOLETA SALÓN STUDIO — STYLESHEET
+   ========================================================= */
+
+:root {
+  --negro: #0F0F0F;
+  --blanco: #FAF8F5;
+  --dorado: #C9A24B;
+  --dorado-claro: #E4C888;
+  --morado: #8B6F9E;
+  --gris: #6B6560;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+
+  --container-w: 1180px;
+  --radius: 4px;
+  --transition: 0.3s ease;
+}
+
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #0F0F0F;
-  background-color: #FAF8F5;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  color: var(--negro);
+  background-color: var(--blanco);
+  line-height: 1.65;
+  overflow-x: hidden;
 }
 
 a {
@@ -20,4 +45,732 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.btn-gold {
+  background-color: var(--dorado);
+  color: var(--negro);
+}
+
+.btn-gold:hover {
+  background-color: var(--dorado-claro);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--blanco);
+  border: 1px solid rgba(250, 248, 245, 0.6);
+}
+
+.btn-outline:hover {
+  background-color: rgba(250, 248, 245, 0.12);
+  border-color: var(--blanco);
+}
+
+/* ===== HEADER ===== */
+.header {
+  background-color: var(--negro);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.header-container {
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--dorado-claro);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  color: var(--blanco);
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--dorado);
+}
+
+.btn-reservar {
+  background-color: var(--dorado);
+  color: var(--negro);
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  transition: background-color var(--transition);
+}
+
+.btn-reservar:hover {
+  background-color: var(--dorado-claro);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dorado-claro);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,15,15,0.55) 0%, rgba(15,15,15,0.55) 40%, rgba(15,15,15,0.85) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--blanco);
+  padding: 0 24px;
+  max-width: 700px;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dorado-claro);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(3.2rem, 10vw, 5.5rem);
+  color: var(--blanco);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero-slogan {
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  font-weight: 300;
+  color: var(--blanco);
+  margin-bottom: 38px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+  padding: 96px 0;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.section-lead {
+  text-align: center;
+  color: var(--gris);
+  max-width: 620px;
+  margin: 0 auto 56px;
+  font-size: 1rem;
+}
+
+/* ===== SERVICIOS ===== */
+.servicios {
+  background-color: var(--blanco);
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.servicios-col-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--negro);
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--dorado);
+  margin-bottom: 20px;
+}
+
+.servicios-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.25);
+}
+
+.serv-name {
+  font-size: 0.98rem;
+  font-weight: 400;
+}
+
+.serv-name em {
+  display: block;
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--morado);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.serv-price {
+  font-weight: 600;
+  color: var(--dorado);
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.servicios-cta {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.servicios-cta p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  color: var(--gris);
+}
+
+/* ===== NUESTRO TRABAJO ===== */
+.trabajo {
+  background-color: #F1EDE6;
+}
+
+.trabajo-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trabajo-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.trabajo-item--featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 340px;
+  transition: transform 0.5s ease;
+}
+
+.trabajo-item--featured:hover img {
+  transform: scale(1.04);
+}
+
+.trabajo-item--soon {
+  background-color: rgba(15, 15, 15, 0.04);
+  border: 1px dashed rgba(201, 162, 75, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.9rem;
+  min-height: 340px;
+  padding: 24px;
+}
+
+/* ===== FILOSOFÍA ===== */
+.filosofia {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.filosofia-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.filosofia-img {
+  border-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+.filosofia-text .section-eyebrow {
+  text-align: left;
+}
+
+.filosofia-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--dorado-claro);
+  line-height: 1.4;
+  margin: 16px 0 28px;
+}
+
+.filosofia-body {
+  color: rgba(250, 248, 245, 0.82);
+  margin-bottom: 16px;
+  font-size: 0.98rem;
+}
+
+/* ===== HISTORIA ===== */
+.historia {
+  background-color: var(--blanco);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto 64px;
+  position: relative;
+}
+
+.timeline-item {
+  text-align: center;
+  padding-top: 28px;
+  position: relative;
+  border-top: 2px solid var(--dorado);
+}
+
+.timeline-year {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--dorado);
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 0.88rem;
+  color: var(--gris);
+}
+
+.historia-img-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.historia-img-wrap img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+/* ===== ASESORÍA ===== */
+.asesoria {
+  background: linear-gradient(135deg, #17140f 0%, #0F0F0F 100%);
+  color: var(--blanco);
+}
+
+.asesoria-container {
+  text-align: center;
+  max-width: 640px;
+}
+
+.asesoria-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  margin-bottom: 18px;
+}
+
+.asesoria-text {
+  color: rgba(250, 248, 245, 0.8);
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+/* ===== VISÍTANOS ===== */
+.visitanos {
+  background-color: #F1EDE6;
+}
+
+.visitanos-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.visitanos-info {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: center;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.info-item p {
+  font-size: 1.02rem;
+}
+
+.info-item a:hover {
+  color: var(--dorado);
+}
+
+.visitanos-map {
+  min-height: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.visitanos-map iframe {
+  min-height: 320px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding-top: 64px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--dorado-claro);
+  margin-bottom: 10px;
+}
+
+.footer-slogan {
+  color: rgba(250, 248, 245, 0.7);
+  font-size: 0.92rem;
+}
+
+.footer-heading {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.footer-col p {
+  color: rgba(250, 248, 245, 0.75);
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: var(--dorado);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(250, 248, 245, 0.12);
+  text-align: center;
+  padding: 22px 0;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: rgba(250, 248, 245, 0.5);
+}
+
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  z-index: 300;
+  transition: transform var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+/* ===== ANIMACIONES SCROLL-REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================================
+   RESPONSIVE — TABLET
+   =================================================== */
+@media (max-width: 960px) {
+  .servicios-grid,
+  .filosofia-container,
+  .visitanos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filosofia-img {
+    max-height: 340px;
+    order: -1;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===================================================
+   RESPONSIVE — MÓVIL
+   =================================================== */
+@media (max-width: 720px) {
+  section {
+    padding: 64px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--negro);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 24px 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .nav.active {
+    max-height: 420px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-list li {
+    border-bottom: 1px solid rgba(250,248,245,0.08);
+  }
+
+  .nav-link {
+    display: block;
+    padding: 14px 0;
+  }
+
+  .btn-reservar {
+    display: block;
+    text-align: center;
+    margin: 16px 0 4px;
+  }
+
+  .hero {
+    min-height: 88vh;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .trabajo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trabajo-item--featured img,
+  .trabajo-item--soon {
+    min-height: 280px;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+  }
 }
