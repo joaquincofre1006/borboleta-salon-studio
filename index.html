@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Borboleta Salón Studio — Chiguayante</title>
-<meta name="description" content="Borboleta Salón Studio: coloración, balayage, tratamientos capilares y más en Chiguayante. Belleza que se siente, confianza que se nota.">
+<meta name="description" content="Borboleta Salón Studio: cabello, cosmetología, masoterapia, cejas, pestañas y maquillaje en Chiguayante. Distintas especialistas, una misma casa de belleza.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Petit+Formal+Script&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 <!-- ===== HEADER ===== -->
 <header class="header" id="top">
   <div class="header-container">
-    <a href="#top" class="logo">Borboleta</a>
+    <a href="#top" class="logo">BORBOLETA<span class="logo-dot"></span></a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -29,7 +29,7 @@
         <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
         <li><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
-      <a href="https://wa.me/56974070491?text=Hola%2C%20quiero%20reservar%20una%20hora%20en%20Borboleta" class="btn-reservar" target="_blank" rel="noopener">Reservar hora</a>
+      <button type="button" class="btn-reservar wa-trigger">Reservar</button>
     </nav>
   </div>
 </header>
@@ -44,11 +44,21 @@
   </div>
   <div class="hero-content reveal">
     <p class="hero-eyebrow">Salón &amp; Studio · Chiguayante</p>
-    <h1 class="hero-title">Borboleta</h1>
+    <h1 class="hero-title">BORBOLETA</h1>
+
+    <svg class="hero-ornament" viewBox="0 0 120 28" aria-hidden="true">
+      <path d="M60 14 C55 4, 44 2, 38 8 C33 13, 38 18, 60 14 C82 18, 87 13, 82 8 C76 2, 65 4, 60 14 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      <line x1="60" y1="14" x2="60" y2="20" stroke="currentColor" stroke-width="1"/>
+      <line x1="0" y1="14" x2="30" y2="14" stroke="currentColor" stroke-width="1"/>
+      <line x1="90" y1="14" x2="120" y2="14" stroke="currentColor" stroke-width="1"/>
+    </svg>
+
     <p class="hero-slogan">Belleza que se siente, confianza que se nota.</p>
+    <p class="hero-areas">Cabello · Piel · Cuerpo · Mirada</p>
+
     <div class="hero-actions">
-      <a href="https://wa.me/56974070491?text=Hola%2C%20quiero%20reservar%20una%20hora%20en%20Borboleta" class="btn btn-gold" target="_blank" rel="noopener">Reservar hora</a>
-      <a href="#servicios" class="btn btn-outline">Conoce nuestros servicios</a>
+      <a href="#servicios" class="btn btn-gold">Ver servicios y precios</a>
+      <button type="button" class="btn btn-outline wa-trigger">Escríbenos por WhatsApp</button>
     </div>
   </div>
 </section>
@@ -57,38 +67,20 @@
 <section class="servicios" id="servicios">
   <div class="container">
     <p class="section-eyebrow reveal">Servicios y precios</p>
-    <h2 class="section-title reveal">Realza tu esencia</h2>
-    <p class="section-lead reveal">Servicios profesionales para que te veas y te sientas increíble. Los precios "desde" pueden variar según el largo y estado del cabello.</p>
+    <h2 class="section-title reveal">Nuestras especialidades</h2>
+    <p class="section-lead reveal">En Borboleta reunimos a distintas especialistas bajo una misma casa. Elige una categoría, revisa el detalle del servicio y reserva directo con la profesional correspondiente.</p>
 
-    <div class="servicios-grid">
-      <div class="servicios-col reveal">
-        <h3 class="servicios-col-title">Cabello</h3>
-        <ul class="servicios-list">
-          <li><span class="serv-name">Balayage <em>desde</em></span><span class="serv-price">$49.900</span></li>
-          <li><span class="serv-name">Visos o mechas con papel <em>desde</em></span><span class="serv-price">$39.990</span></li>
-          <li><span class="serv-name">Tonos fantasía <em>desde</em></span><span class="serv-price">$25.000</span></li>
-          <li><span class="serv-name">Macrolights <em>desde</em></span><span class="serv-price">$29.990</span></li>
-          <li><span class="serv-name">Highlights <em>desde</em></span><span class="serv-price">$39.990</span></li>
-          <li><span class="serv-name">Babylights <em>desde</em></span><span class="serv-price">$49.990</span></li>
-        </ul>
-      </div>
-
-      <div class="servicios-col reveal">
-        <h3 class="servicios-col-title">Otros servicios</h3>
-        <ul class="servicios-list">
-          <li><span class="serv-name">Lavado + masaje + corte + brushing</span><span class="serv-price">$19.990</span></li>
-          <li><span class="serv-name">Lavado + corte + brushing</span><span class="serv-price">$14.990</span></li>
-          <li><span class="serv-name">Color crecimiento</span><span class="serv-price">$30.000</span></li>
-          <li><span class="serv-name">Color global</span><span class="serv-price">$35.000</span></li>
-          <li><span class="serv-name">Tratamientos capilares <em>desde</em></span><span class="serv-price">$24.990</span></li>
-          <li><span class="serv-name">Alisados permanentes <em>desde</em></span><span class="serv-price">$25.000</span></li>
-        </ul>
-      </div>
+    <div class="tabs reveal" id="serviceTabs" role="tablist" aria-label="Categorías de servicios">
+      <!-- Los botones de categoría se generan automáticamente con JavaScript -->
     </div>
 
-    <div class="servicios-cta reveal">
-      <p>¿Ya sabes qué te quieres hacer?</p>
-      <a href="https://wa.me/56974070491?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Borboleta" class="btn btn-gold" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+    <div class="service-panels reveal" id="servicePanels">
+      <!-- Las tarjetas de servicio se generan automáticamente con JavaScript -->
+    </div>
+
+    <div class="servicios-help reveal">
+      <p>¿No encuentras lo que buscas?</p>
+      <button type="button" class="btn btn-outline-dark wa-trigger">Escríbenos y te ayudamos a elegir</button>
     </div>
   </div>
 </section>
@@ -96,17 +88,16 @@
 <!-- ===== NUESTRO TRABAJO ===== -->
 <section class="trabajo" id="trabajo">
   <div class="container">
-    <p class="section-eyebrow reveal">Galería</p>
+    <p class="section-eyebrow reveal">Transformaciones reales</p>
     <h2 class="section-title reveal">Nuestro trabajo</h2>
-    <p class="section-lead reveal">Cada transformación es distinta, como cada clienta. Esta galería irá creciendo con nuevos trabajos.</p>
+    <p class="section-lead reveal">Trabajos reales realizados dentro de Borboleta. Esta galería irá creciendo por especialidad.</p>
 
-    <div class="trabajo-grid reveal">
-      <figure class="trabajo-item trabajo-item--featured">
-        <img src="assets/img/trabajo-balayage-rojo.jpg" alt="Coloración fantasía en tonos rojo borgoña realizada en Borboleta Salón Studio" loading="lazy">
-      </figure>
-      <div class="trabajo-item trabajo-item--soon">
-        <span>Próximamente<br>más trabajos</span>
-      </div>
+    <div class="gallery-tabs reveal" id="galleryTabs" role="tablist" aria-label="Filtrar galería por especialidad">
+      <!-- Se genera con JavaScript -->
+    </div>
+
+    <div class="trabajo-showcase reveal" id="galleryContent">
+      <!-- Se genera con JavaScript -->
     </div>
   </div>
 </section>
@@ -119,7 +110,7 @@
       <p class="section-eyebrow">Mucho más que belleza</p>
       <p class="filosofia-quote">"Porque para nosotros, tu belleza comienza cuando vuelves a sentirte bien contigo."</p>
       <p class="filosofia-body">Para Borboleta, una clienta nunca es simplemente una persona más. Queremos que cada mujer que nos visita se sienta escuchada, comprendida y acompañada, en un ambiente cercano y familiar.</p>
-      <p class="filosofia-body">Nos apasiona transformar el cabello y ayudar a que cada mujer vuelva a mirarse y sentirse bien consigo misma. Creemos que la belleza también tiene que ver con aprender a quererse.</p>
+      <p class="filosofia-body">Nos apasiona transformar el cabello, cuidar la piel y acompañar el bienestar de cada mujer que nos visita. Creemos que la belleza también tiene que ver con aprender a quererse.</p>
     </div>
   </div>
 </section>
@@ -129,6 +120,7 @@
   <div class="container">
     <p class="section-eyebrow reveal">Nosotros</p>
     <h2 class="section-title reveal">Nuestra historia</h2>
+    <p class="section-lead reveal">Borboleta es un salón studio integral de belleza: distintas especialistas, una misma casa.</p>
 
     <div class="timeline">
       <div class="timeline-item reveal">
@@ -145,7 +137,7 @@
       </div>
       <div class="timeline-item reveal">
         <span class="timeline-year">Hoy</span>
-        <p>Gracias a la confianza de nuestras clientas, Borboleta creció hasta formar un equipo de profesionales.</p>
+        <p>Borboleta creció hasta convertirse en un salón integral, donde distintas profesionales especializadas atienden bajo una misma identidad.</p>
       </div>
     </div>
 
@@ -155,12 +147,13 @@
   </div>
 </section>
 
-<!-- ===== ASESORÍA GRATUITA ===== -->
+<!-- ===== ASESORÍA GRATUITA (CABELLO) ===== -->
 <section class="asesoria">
   <div class="container asesoria-container reveal">
-    <h2 class="asesoria-title">¿No sabes qué servicio necesitas?</h2>
-    <p class="asesoria-text">Conversemos. Ofrecemos una asesoría gratuita para escuchar lo que buscas, conocer tus necesidades y orientarte hacia el resultado ideal para ti.</p>
-    <a href="https://wa.me/56974070491?text=Hola%2C%20me%20gustar%C3%ADa%20una%20asesor%C3%ADa%20gratuita%20en%20Borboleta" class="btn btn-gold" target="_blank" rel="noopener">Quiero mi asesoría gratuita</a>
+    <p class="asesoria-eyebrow">Área cabello</p>
+    <h2 class="asesoria-title">¿No sabes qué corte o color necesitas?</h2>
+    <p class="asesoria-text">Conversemos. Ofrecemos una asesoría gratuita de cabello para escuchar lo que buscas y orientarte hacia el resultado ideal para ti.</p>
+    <a href="https://wa.me/56974070491?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Borboleta%20y%20me%20gustar%C3%ADa%20una%20asesor%C3%ADa%20gratuita%20de%20cabello" class="btn btn-gold" target="_blank" rel="noopener">Quiero mi asesoría gratuita</a>
   </div>
 </section>
 
@@ -181,18 +174,23 @@
           <p>Lunes a viernes, 8:30 a 19:00</p>
         </div>
         <div class="info-item">
-          <span class="info-label">WhatsApp</span>
+          <span class="info-label">Cabello</span>
           <p><a href="https://wa.me/56974070491" target="_blank" rel="noopener">+56 9 7407 0491</a></p>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Cejas · Pestañas · Piel · Cuerpo · Maquillaje</span>
+          <p><a href="https://wa.me/56966717174" target="_blank" rel="noopener">+56 9 6671 7174</a></p>
         </div>
         <div class="info-item">
           <span class="info-label">Instagram</span>
           <p><a href="https://instagram.com/borboleta_salon" target="_blank" rel="noopener">@borboleta_salon</a></p>
         </div>
+        <a href="https://maps.app.goo.gl/drgxFLvsZq2GsmG78" target="_blank" rel="noopener" class="btn btn-outline-dark">Cómo llegar</a>
       </div>
 
       <div class="visitanos-map reveal">
         <iframe
-          src="https://www.google.com/maps?q=place_id:ChIJI30rL8S5aZYRhRJ4zEIikGo&output=embed"
+          src="https://www.google.com/maps?q=-36.9472345,-73.019525&z=18&output=embed"
           width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Ubicación de Borboleta Salón Studio en Google Maps">
@@ -209,18 +207,19 @@
   <div class="container footer-container">
     <div class="footer-col">
       <p class="footer-logo">Borboleta</p>
-      <p class="footer-slogan">Tu mejor versión comienza aquí.</p>
+      <p class="footer-slogan-script">Tu mejor versión comienza aquí.</p>
     </div>
     <div class="footer-col">
-      <span class="footer-heading">Contacto</span>
+      <span class="footer-heading">Cabello</span>
+      <p><a href="https://wa.me/56974070491" target="_blank" rel="noopener">+56 9 7407 0491</a></p>
+      <span class="footer-heading footer-heading--spaced">Cejas · Pestañas · Piel · Cuerpo · Maquillaje</span>
+      <p><a href="https://wa.me/56966717174" target="_blank" rel="noopener">+56 9 6671 7174</a></p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-heading">Visítanos</span>
       <p>Calle Esperanza 563 B, Chiguayante</p>
-      <p>+56 9 7407 0491</p>
       <p>Lunes a viernes, 8:30–19:00</p>
-    </div>
-    <div class="footer-col">
-      <span class="footer-heading">Síguenos</span>
-      <p><a href="https://instagram.com/borboleta_salon" target="_blank" rel="noopener">Instagram</a></p>
-      <p><a href="https://wa.me/56974070491" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a href="https://instagram.com/borboleta_salon" target="_blank" rel="noopener">Instagram @borboleta_salon</a></p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -228,12 +227,25 @@
   </div>
 </footer>
 
-<!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
-<a href="https://wa.me/56974070491?text=Hola%2C%20quiero%20reservar%20una%20hora%20en%20Borboleta" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
-    <path d="M16.001 3C9.096 3 3.5 8.596 3.5 15.5c0 2.373.66 4.59 1.804 6.482L3 29l7.2-2.259A12.44 12.44 0 0 0 16.001 28C22.905 28 28.5 22.404 28.5 15.5S22.905 3 16.001 3zm0 22.72a10.16 10.16 0 0 1-5.29-1.47l-.38-.226-4.27 1.34 1.36-4.16-.248-.39A10.14 10.14 0 0 1 5.78 15.5c0-5.63 4.585-10.22 10.221-10.22 5.635 0 10.22 4.59 10.22 10.22 0 5.635-4.585 10.22-10.22 10.22zm5.61-7.63c-.307-.154-1.816-.897-2.098-.998-.281-.103-.486-.154-.69.153-.205.308-.792.998-.972 1.203-.179.205-.358.23-.665.077-.307-.154-1.296-.478-2.468-1.524-.912-.813-1.528-1.817-1.707-2.124-.179-.307-.02-.473.135-.626.138-.138.307-.358.46-.538.154-.179.205-.307.307-.512.103-.205.051-.384-.026-.538-.077-.154-.69-1.664-.946-2.28-.249-.598-.502-.517-.69-.527l-.588-.01c-.205 0-.538.077-.82.384-.281.307-1.075 1.05-1.075 2.56s1.101 2.97 1.254 3.175c.154.205 2.166 3.31 5.248 4.64.733.317 1.305.506 1.751.647.735.234 1.404.201 1.933.122.59-.088 1.816-.742 2.072-1.459.256-.716.256-1.331.179-1.459-.077-.128-.281-.205-.588-.358z"/>
-  </svg>
-</a>
+<!-- ===== SELECTOR FLOTANTE DE WHATSAPP ===== -->
+<div class="wa-widget" id="waWidget">
+  <div class="wa-panel" id="waPanel" role="dialog" aria-label="Elegir a quién escribir por WhatsApp" hidden>
+    <p class="wa-panel-title">¿Qué buscas?</p>
+    <button type="button" class="wa-option" data-wa="56974070491" data-msg="Hola, vi la página de Borboleta y quisiera reservar una hora de cabello.">
+      <span class="wa-option-label">Cabello</span>
+      <span class="wa-option-sub">Corte, color, tratamientos</span>
+    </button>
+    <button type="button" class="wa-option" data-wa="56966717174" data-msg="Hola, vi la página de Borboleta y quisiera más información.">
+      <span class="wa-option-label">Belleza</span>
+      <span class="wa-option-sub">Cejas, pestañas, piel, cuerpo, maquillaje</span>
+    </button>
+  </div>
+  <button type="button" class="whatsapp-float" id="waFloatBtn" aria-label="Escríbenos por WhatsApp" aria-expanded="false">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M16.001 3C9.096 3 3.5 8.596 3.5 15.5c0 2.373.66 4.59 1.804 6.482L3 29l7.2-2.259A12.44 12.44 0 0 0 16.001 28C22.905 28 28.5 22.404 28.5 15.5S22.905 3 16.001 3zm0 22.72a10.16 10.16 0 0 1-5.29-1.47l-.38-.226-4.27 1.34 1.36-4.16-.248-.39A10.14 10.14 0 0 1 5.78 15.5c0-5.63 4.585-10.22 10.221-10.22 5.635 0 10.22 4.59 10.22 10.22 0 5.635-4.585 10.22-10.22 10.22zm5.61-7.63c-.307-.154-1.816-.897-2.098-.998-.281-.103-.486-.154-.69.153-.205.308-.792.998-.972 1.203-.179.205-.358.23-.665.077-.307-.154-1.296-.478-2.468-1.524-.912-.813-1.528-1.817-1.707-2.124-.179-.307-.02-.473.135-.626.138-.138.307-.358.46-.538.154-.179.205-.307.307-.512.103-.205.051-.384-.026-.538-.077-.154-.69-1.664-.946-2.28-.249-.598-.502-.517-.69-.527l-.588-.01c-.205 0-.538.077-.82.384-.281.307-1.075 1.05-1.075 2.56s1.101 2.97 1.254 3.175c.154.205 2.166 3.31 5.248 4.64.733.317 1.305.506 1.751.647.735.234 1.404.201 1.933.122.59-.088 1.816-.742 2.072-1.459.256-.716.256-1.331.179-1.459-.077-.128-.281-.205-.588-.358z"/>
+    </svg>
+  </button>
+</div>
 
 <script src="js/script.js"></script>
 </body>
